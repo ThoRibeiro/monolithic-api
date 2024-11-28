@@ -2,7 +2,7 @@ import bodyParser from "body-parser";
 import express from "express";
 import mongoose from "mongoose";
 
-const PORT = 3500;
+const PORT = 3000;
 
 /**
  * Initialise le serveur Express avec les routes nécessaires.
