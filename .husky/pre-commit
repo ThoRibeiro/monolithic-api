@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "........🚀 Running Prettier 🚀........"
+npx lint-staged --allow-empty
+echo ".........✅ Prettier is OK ✅........."
