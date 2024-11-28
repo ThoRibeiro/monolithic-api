@@ -1,7 +1,7 @@
-
 # Monolithic API
 
 ## Description
+
 Ce projet est une API monolithique développée développée avec Node.js, Express, TypeScript, avec une base de données MongoDB gérée via Docker. Pour un jeu RPG.
 
 ---
@@ -25,6 +25,7 @@ Assurez-vous d'avoir les outils suivants installés sur votre machine :
 - **Gestion de l'Inventaire** : Ajout/suppression d'objets, gestion de l'équipement, consommation d'items, et marché en jeu.
 
 ---
+
 ## Installation
 
 ### 1. Cloner le dépôt
@@ -74,6 +75,7 @@ src/
 ├── routes/            # Définition des routes et association aux contrôleurs
 ├── server.ts          # Point d'entrée de l'application
 ```
+
 ---
 
 ## Lancer le projet
@@ -87,7 +89,6 @@ npm run start:dev
 ```
 
 Le serveur sera accessible sur [http://localhost:3500](http://localhost:3500).
-
 
 ## Docker Compose
 
