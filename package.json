@@ -1,0 +1,32 @@
+{
+  "name": "monolithic-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "start:watch": "nodemon dist/server.js",
+    "build:watch": "tsc -w",
+    "build:start": "tsc && npm run start:watch",
+    "dev": "npm run build && (npm run build:watch & npm run start:watch)"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "lint-staged": {
+    "*.{ts,js,json,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.1",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.1",
+    "typescript": "^5.7.2"
+  }
+}
