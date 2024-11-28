@@ -78,6 +78,41 @@ src/
 
 ---
 
+## Référencer les Issues dans les Commits
+
+Lorsque vous travaillez sur une issue GitHub, vous pouvez la référencer ou même la fermer automatiquement dans un commit en suivant ces étapes :
+
+### Référencer une Issue
+
+- Pour référencer une issue, utilisez simplement son numéro précédé d'un `#` dans le message du commit.
+
+**Exemple :**
+```bash
+git commit -m "fix: Corrige un bug lié à l'authentification #42"
+```
+Cela ajoutera un lien vers l'issue **#42** dans l'historique du commit.
+
+### Fermer une Issue automatiquement
+
+- Utilisez des mots-clés comme `fixes`, `closes` ou `resolves` suivi du numéro de l'issue pour la fermer automatiquement lorsque le commit est fusionné dans la branche principale.
+
+**Exemple :**
+```bash
+git commit -m "feat: Ajoute le modèle User fixes #10"
+```
+Cela fermera automatiquement l'issue **#10**.
+
+### Référencer plusieurs Issues
+
+- Vous pouvez également mentionner plusieurs issues dans un seul commit.
+
+**Exemple :**
+```bash
+git commit -m "update: Implémente la validation de l'utilisateur fixes #10, resolves #11"
+```
+
+---
+
 ## Lancer le projet
 
 ### 1. Mode développement
