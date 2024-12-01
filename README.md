@@ -118,10 +118,10 @@ git commit -m "update: Implémente la validation de l'utilisateur fixes #10, res
 Pour lancer le projet en mode développement, utilisez la commande suivante :
 
 ```bash
-npm run start:dev
+npm run dev
 ```
 
-Le serveur sera accessible sur [http://localhost:3500](http://localhost:3500).
+Le serveur sera accessible sur [http://localhost:3000](http://localhost:3000).
 
 ## Docker Compose
 
