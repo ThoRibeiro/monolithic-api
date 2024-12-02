@@ -49,6 +49,7 @@ Elle permet la configuration automatique de Husky pour les différents hooks Git
 ### 3. Création du .env
 
 Initialisation du .env avec un JWT_SECRET
+
 ```bash
 JWT_SECRET = your_jwt_secret
 ```
