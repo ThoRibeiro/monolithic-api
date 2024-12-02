@@ -43,17 +43,10 @@ Exécutez la commande suivante pour installer toutes les dépendances :
 npm install
 ```
 
-### 3. Configurer Husky
+En installant les dépendances, la commande `npm run prepare` sera également appelée.
+Elle permet la configuration automatique de Husky pour les différents hooks Git.
 
-Activez les hooks Git avec Husky :
-
-```bash
-npm run prepare
-```
-
-Husky configurera automatiquement les hooks Git pour assurer la qualité du code (e.g., exécution de Prettier avant les commits).
-
-### 4. Lancer la base de données MongoDB
+### 3. Lancer la base de données MongoDB
 
 Pour démarrer l'instance MongoDB avec Docker Compose, exécutez la commande suivante à la racine du projet :
 
@@ -87,9 +80,11 @@ Lorsque vous travaillez sur une issue GitHub, vous pouvez la référencer ou mê
 - Pour référencer une issue, utilisez simplement son numéro précédé d'un `#` dans le message du commit.
 
 **Exemple :**
+
 ```bash
 git commit -m "fix: Corrige un bug lié à l'authentification #42"
 ```
+
 Cela ajoutera un lien vers l'issue **#42** dans l'historique du commit.
 
 ### Fermer une Issue automatiquement
@@ -97,9 +92,11 @@ Cela ajoutera un lien vers l'issue **#42** dans l'historique du commit.
 - Utilisez des mots-clés comme `fixes`, `closes` ou `resolves` suivi du numéro de l'issue pour la fermer automatiquement lorsque le commit est fusionné dans la branche principale.
 
 **Exemple :**
+
 ```bash
 git commit -m "feat: Ajoute le modèle User fixes #10"
 ```
+
 Cela fermera automatiquement l'issue **#10**.
 
 ### Référencer plusieurs Issues
@@ -107,6 +104,7 @@ Cela fermera automatiquement l'issue **#10**.
 - Vous pouvez également mentionner plusieurs issues dans un seul commit.
 
 **Exemple :**
+
 ```bash
 git commit -m "update: Implémente la validation de l'utilisateur fixes #10, resolves #11"
 ```
@@ -120,10 +118,10 @@ git commit -m "update: Implémente la validation de l'utilisateur fixes #10, res
 Pour lancer le projet en mode développement, utilisez la commande suivante :
 
 ```bash
-npm run start:dev
+npm run dev
 ```
 
-Le serveur sera accessible sur [http://localhost:3500](http://localhost:3500).
+Le serveur sera accessible sur [http://localhost:3000](http://localhost:3000).
 
 ## Docker Compose
 
