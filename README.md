@@ -46,6 +46,14 @@ npm install
 En installant les dépendances, la commande `npm run prepare` sera également appelée.
 Elle permet la configuration automatique de Husky pour les différents hooks Git.
 
+### 3. Création du .env
+
+Initialisation du .env avec un JWT_SECRET
+
+```bash
+JWT_SECRET = your_jwt_secret
+```
+
 ### 3. Lancer la base de données MongoDB
 
 Pour démarrer l'instance MongoDB avec Docker Compose, exécutez la commande suivante à la racine du projet :
