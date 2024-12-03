@@ -1,13 +1,14 @@
 import express from 'express';
 import { ItemController } from '../controllers/itemControllers';
+import { authMiddleware } from '../middlewares/authMiddleware';
 
 const itemRoutes = express.Router();
 
 // Define routes with controller methods
-itemRoutes.post('/create', ItemController.createItem);
-itemRoutes.get('/getAll', ItemController.getItems);
-itemRoutes.get('/:id', ItemController.getItemById);
-itemRoutes.put('/:id', ItemController.updateItem);
-itemRoutes.delete('/:id', ItemController.deleteItem);
+itemRoutes.post('/create', authMiddleware,  ItemController.createItem);
+itemRoutes.get('/getAll', authMiddleware, ItemController.getItems);
+itemRoutes.get('/:id', authMiddleware, ItemController.getItemById);
+itemRoutes.put('/:id', authMiddleware, ItemController.updateItem);
+itemRoutes.delete('/:id', authMiddleware, ItemController.deleteItem);
 
 export default itemRoutes;
