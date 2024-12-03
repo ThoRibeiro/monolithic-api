@@ -5,7 +5,7 @@ import { authMiddleware } from '../middlewares/authMiddleware';
 const itemRoutes = express.Router();
 
 // Define routes with controller methods
-itemRoutes.post('/create', authMiddleware,  ItemController.createItem);
+itemRoutes.post('/create', authMiddleware, ItemController.createItem);
 itemRoutes.get('/getAll', authMiddleware, ItemController.getItems);
 itemRoutes.get('/:id', authMiddleware, ItemController.getItemById);
 itemRoutes.put('/:id', authMiddleware, ItemController.updateItem);

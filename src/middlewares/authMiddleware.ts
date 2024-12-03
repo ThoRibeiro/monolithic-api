@@ -8,13 +8,13 @@ interface AuthenticatedRequest extends Request {
   token?: { id: string; username: string; role?: string };
 }
 
-export const authMiddleware = (req: AuthenticatedRequest, res: Response, next: NextFunction) : void => {
+export const authMiddleware = (req: AuthenticatedRequest, res: Response, next: NextFunction): void => {
   try {
     const authorizationHeader = req.headers.authorization;
     if (!authorizationHeader) {
       console.error('Authorization header missing');
-       res.status(401).json({ message: 'Authentication failed. Please try again.' });
-       return;
+      res.status(401).json({ message: 'Authentication failed. Please try again.' });
+      return;
     }
 
     const token = authorizationHeader.split(' ')[1];
