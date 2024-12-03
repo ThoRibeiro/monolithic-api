@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import authRoutes from './routes/authRoutes';
 import itemRoutes from './routes/itemRoutes';
+import inventoryRoutes from './routes/inventoryRoutes';
 
 const PORT = 3000;
 
@@ -15,6 +16,7 @@ async function main() {
   server.use(bodyParser.json());
 
   server.use('/auth', authRoutes);
+  server.use('/inventories', inventoryRoutes);
   server.use('/items', itemRoutes);
 
   server.listen(PORT, () => {
