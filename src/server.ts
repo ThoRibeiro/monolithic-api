@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import mongoose from 'mongoose';
 import authRoutes from './routes/authRoutes';
+import itemRoutes from './routes/itemRoutes';
 
 const PORT = 3000;
 
@@ -14,6 +15,7 @@ async function main() {
   server.use(bodyParser.json());
 
   server.use('/auth', authRoutes);
+  server.use('/items', itemRoutes);
 
   server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
