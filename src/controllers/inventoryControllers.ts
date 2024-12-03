@@ -60,17 +60,15 @@ export class InventoryController {
   static async removeItem(req: Request, res: Response): Promise<void> {
     try {
       const { userId, itemId } = req.body;
-  
+
       const inventory = await Inventory.findOne({ user: userId });
       if (!inventory) {
         res.status(404).json({ message: 'Inventory not found.' });
         return;
       }
-  
-      inventory.items = inventory.items.filter(
-        (item) => item.toString() !== itemId
-      );
-  
+
+      inventory.items = inventory.items.filter((item) => item.toString() !== itemId);
+
       await inventory.save();
       res.status(200).json({ message: 'Item removed successfully.', inventory });
     } catch (error: unknown) {
@@ -78,7 +76,6 @@ export class InventoryController {
     }
   }
 
-  
   static async deleteInventory(req: Request, res: Response): Promise<void> {
     try {
       const { userId } = req.params;
