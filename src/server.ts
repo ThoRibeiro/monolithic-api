@@ -3,6 +3,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import authRoutes from './routes/authRoutes';
 import itemRoutes from './routes/itemRoutes';
+import enemyRoutes from './routes/enemyRoutes';
 
 const PORT = 3000;
 
@@ -16,6 +17,7 @@ async function main() {
 
   server.use('/auth', authRoutes);
   server.use('/items', itemRoutes);
+  server.use('/enemy', enemyRoutes);
 
   server.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

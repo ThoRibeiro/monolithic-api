@@ -6,6 +6,4 @@ export interface Enemy extends Document {
   healthPoints: number;
   attackPower: number;
   defensePower: number;
-  takeDamage(amount: number): void;
-  dealDamage(): number;
 }
