@@ -12,7 +12,7 @@ export class ItemController {
     }
   }
 
-  static async getItems(req: Request, res: Response): Promise<void> {
+  static async getAllItems(req: Request, res: Response): Promise<void> {
     try {
       const items = await Item.find();
       res.status(200).json(items);
