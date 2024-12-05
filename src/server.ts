@@ -5,8 +5,7 @@ import authRoutes from './routes/authRoutes';
 import itemRoutes from './routes/itemRoutes';
 import inventoryRoutes from './routes/inventoryRoutes';
 
-const PORT = 3000;
-
+const PORT = process.env.PORT
 /**
  * Initialise the Express server with the necessary routes.
  */

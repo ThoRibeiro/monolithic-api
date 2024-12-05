@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { User } from '../interfaces/models/userInterfaces';
+import { IUser } from '../interfaces/models/userInterfaces';
 
 const UserSchema: Schema = new Schema({
   email: {
@@ -20,4 +20,4 @@ const UserSchema: Schema = new Schema({
   },
 });
 
-export const UserModel = mongoose.model<User>('User', UserSchema);
+export const UserModel = mongoose.model<IUser>('User', UserSchema);

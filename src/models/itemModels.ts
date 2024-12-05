@@ -1,6 +1,7 @@
 import { model, Schema } from 'mongoose';
+import { IItem } from '../interfaces/models/itemInterfaces';
 
-const itemSchema = new Schema({
+const itemSchema = new Schema<IItem>({
   name: {
     type: String,
     required: true,
@@ -15,4 +16,4 @@ const itemSchema = new Schema({
   },
 });
 
-export const Item = model('Item', itemSchema);
+export const Item = model<IItem>('Item', itemSchema);
